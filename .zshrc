@@ -125,10 +125,10 @@ colorscript random
 # System Commands aliases
 
 # Pacman alias
-alias update='sudo pacman -Syyu'
+alias update='sudo pacman -Syyu && paru -Syyu'
 alias dp='sudo pacman -S'
 alias da='paru -S'
-alias update-aur='paru -Syu'
+#alias update-aur='paru -Syu'
 alias clean='sudo pacman -Sc'
 
 alias ht='htop'
@@ -136,6 +136,7 @@ alias nf='neofetch --ascii_distro centos'
 
 #Window manager Things => awesomeWM
 alias bb='sudo ~/.config/awesome/brightness.sh'
+alias screenlayout='sh ~/.screenlayout/samsungMonitor.sh'
 
 alias ls="exa -l"
 alias ll="exa -la"
