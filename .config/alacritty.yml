@@ -180,7 +180,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -397,16 +397,18 @@ schemes:
     # Default colors
     primary:
       background: '#1b2b34'
+      # background: '#ffffff'
       foreground: '#d8dee9'
 
     # Colors the cursor will use if `custom_cursor_colors` is true
     cursor:
-      text: '#1b2b34'
+      # text: '#1b2b34'
+      text: '#ffffff'
       cursor: '#ffffff'
 
     # Normal colors
     normal:
-      black:   '#343d46'
+      black:   '#232b2b'
       red:     '#EC5f67'
       green:   '#99C794'
       yellow:  '#FAC863'
@@ -417,7 +419,7 @@ schemes:
 
     # Bright colors
     bright:
-      black:   '#343d46'
+      black:   '#7e5e60'
       red:     '#EC5f67'
       green:   '#99C794'
       yellow:  '#FAC863'
