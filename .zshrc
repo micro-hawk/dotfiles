@@ -125,14 +125,31 @@ colorscript random
 # System Commands aliases
 
 # Pacman alias
-alias update='sudo pacman -Syyu && paru -Syyu'
+alias update='sudo pacman -Syu && paru -Syu'
+
 alias dp='sudo pacman -S'
+alias dps='sudo pacman -Ss'
+
 alias da='paru -S'
-#alias update-aur='paru -Syu'
+alias das='paru -Ss'
+
 alias clean='sudo pacman -Sc'
+alias remove='sudo pacman -Rcns'
+
+#git aliases
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+alias gdiff='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
+
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status -sb' # upgrade your git if -sb breaks for you.
+
+alias gunstage="git restore --staged ."
+alias gstash="git stash -u"
 
 alias ht='htop'
-alias nf='neofetch --ascii_distro centos'
+alias nf='neofetch --ascii_distro arch'
 
 #Window manager Things => awesomeWM
 alias bb='sudo ~/.config/awesome/brightness.sh'
@@ -146,6 +163,10 @@ alias plz="sudo"
 alias dirsize='du -sch ./*'
 alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c"
 alias weather='curl wttr.in'
+
+source pgadmin4/bin/activate
+
+
 
 # extraAliases
 fcd(){
