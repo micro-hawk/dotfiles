@@ -1,10 +1,20 @@
+// * {
+//   accent:           #DA4453;
+//   background:       #151b1e;
+//   background-light: #222d32;
+//   foreground:       #93a1a1;
+//   on:               #5BB462;
+//   off:              #DE635E;
+// }
+
 * {
-  accent:           #DA4453;
-  background:       #151b1e;
-  background-light: #222d32;
+  accent:           #f7768e;
+  background:       #16161e;
+  background-light: #1a1b26;
   foreground:       #93a1a1;
-  on:               #5BB462;
-  off:              #DE635E;
+  on:               #9ece6a;
+  font:				 	"Cartograph CF Italic 12";
+  off:              #8c4351;
 }
 
 // * {

@@ -81,7 +81,7 @@ case $chosen in
         ;;
     $lock)
 		if [[ -f /usr/bin/i3lock-fancy ]]; then
-			i3lock-fancy
+			i3lock-fancy -t MicroHawk
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
 		fi

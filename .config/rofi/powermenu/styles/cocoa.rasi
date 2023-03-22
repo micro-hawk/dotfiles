@@ -5,5 +5,5 @@
     border:               			#B38184ff;
     border-alt:               		#F3B69Eff;
     selected:               		#B381841a;
-    urgent:                         #DA4453FF;
+    urgent:                         #ef5c91;
 }
