@@ -120,57 +120,18 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ### RANDOM COLOR SCRIPT ###
-colorscript random
+#colorscript random
 
-# System Commands aliases
+ip4=$(/sbin/ip -o -4 addr list wlo1 | awk '{print $4}' | cut -d/ -f1)
 
-# Pacman alias
-alias update='sudo pacman -Syu && paru -Syu'
-
-alias dp='sudo pacman -S'
-alias dps='sudo pacman -Ss'
-
-alias da='paru -S'
-alias das='paru -Ss'
-
-alias clean='sudo pacman -Sc'
-alias remove='sudo pacman -Rcns'
-
-#git aliases
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-
-alias gdiff='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
-
-alias gco='git checkout'
-alias gb='git branch'
-alias gs='git status -sb' # upgrade your git if -sb breaks for you.
-
-alias gunstage="git restore --staged ."
-alias gstash="git stash -u"
-
-alias ht='htop'
-alias nf='neofetch --ascii_distro arch'
-
-#Window manager Things => awesomeWM
-alias bb='sudo ~/.config/awesome/brightness.sh'
-alias screenlayout='sh ~/.screenlayout/samsungMonitor.sh'
-
-alias ls="exa -l"
-alias ll="exa -la"
-alias la="exa --long --all --group"
-
-alias plz="sudo"
-alias dirsize='du -sch ./*'
-alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c"
-alias weather='curl wttr.in'
-
-source pgadmin4/bin/activate
+export SPRING_CONSUL_HOST=${ip4}
+export VAULT_ADDR='http://0.0.0.0:8200'
+export VAULT_TOKEN=hvs.gYG9Zb1c7w7EYfaMk3o1OV1J
 
 
+#source pgadmin4/bin/activate
 
-# extraAliases
-fcd(){
-  cd "$(find -type d | fzf)"
-}
-
-
+source ~/.zsh-aliases/exa.zsh
+source ~/.zsh-aliases/git.zsh
+source ~/.zsh-aliases/nix.zsh
+source ~/.zsh-aliases/users.zsh

@@ -9,7 +9,7 @@
 
 
 call plug#begin('~/.vim/plugged')
-packadd! dracula
+"packadd! dracula
 
 
 Plug 'https://github.com/rafi/awesome-vim-colorschemes.git'
@@ -24,6 +24,8 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'wfxr/minimap.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 " theme Github
 Plug 'wojciechkepka/vim-github-dark'
@@ -132,9 +134,9 @@ nnoremap <leader>a :Ag
 """"""""""""""""""""""""""""""""""""""""""""""
 
 
-"colorscheme ghdark 
+" colorscheme ghdark 
 "
-colorscheme OceanicNext
+"colorscheme OceanicNext
 "colorscheme 256_noir
 "colorscheme abstract
 "colorscheme afterglow
@@ -154,15 +156,18 @@ colorscheme OceanicNext
 "colorscheme minimalist
 "colorscheme molokai
 "colorscheme nord
-"colorscheme one-dark
 "colorscheme one
 "colorscheme wombat256
 "colorscheme twilight256
 
+set termguicolors
 
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
 
-"set background=dark
+colorscheme tokyonight
 
+set background=dark
 
 
 " for transparent background
@@ -199,3 +204,9 @@ autocmd InsertLeave * set nocursorline
 "set nocursorline
 
 " trasparent end
+"
+let g:minimap_width = 7
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+let g:minimap_highlight_search = 1
+let g:minimap_highlight_range = 1
